@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 const port = 4008;
 
-const app = express()
+const app = express();
 
 app.use(bodyParser.json())
 
