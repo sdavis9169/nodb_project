@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './Comment.css'
 
 class Comment extends Component {
     constructor() {
@@ -32,7 +33,8 @@ class Comment extends Component {
     }
 
     edit(id) {
-        axios.put(`/api/get-text/${id}`, { text: this.state.editInput }).then(res => {
+        axios.put(`/api/get-text/${id}`, { text: this.state.editInput })
+        .then(res => {
             this.setState({
                 text: res.data
                 
@@ -61,7 +63,7 @@ class Comment extends Component {
         let display = text.map(ele => {
             return (
                 <div key={ele.id}>
-                    <h1 >{ele.text}</h1>
+                    <h1 class='text'>{ele.text}</h1>
                     <input onChange={(e) =>
                         this.editText(e)} placeholder="Edit Your Text"></input>
                     <button onClick={() =>
@@ -76,7 +78,7 @@ class Comment extends Component {
             <div>
                 
                 <div>
-                <input value={this.state.input}placeholder="How's your weather?"onChange={(e) => {
+                <input value={this.state.input}placeholder="Add Recipe Here"onChange={(e) => {
                     this.updateInput(e)
                 }
                 }></input>

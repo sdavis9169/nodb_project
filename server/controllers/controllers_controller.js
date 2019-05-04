@@ -1,6 +1,6 @@
 let messages = [
   {
-    text: 'Provo is cold',
+    text: 'Add Recipes',
     id: 0
   }, 
 ]
@@ -42,4 +42,4 @@ module.exports = {
   }
 
   
-};
+}

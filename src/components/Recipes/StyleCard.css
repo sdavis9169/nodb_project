@@ -1,0 +1,15 @@
+.image{
+    align-content: center;
+    width: 400px;
+    height: 400px;
+}
+
+.name{
+    color: white;
+    font-size: 75px;
+    margin: 0 auto;
+}
+
+.name2{
+    color: white;
+}
